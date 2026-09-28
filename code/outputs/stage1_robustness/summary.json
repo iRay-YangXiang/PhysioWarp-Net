@@ -1,0 +1,85 @@
+{
+  "runs": [
+    {
+      "initial_total_loss": 0.9052186012268066,
+      "final_total_loss": 0.2511798143386841,
+      "initial_soft_success": 0.09478138387203217,
+      "final_soft_success": 0.9679188132286072,
+      "mean_abs_delta_inside": 0.48861151933670044,
+      "max_abs_delta_outside": 0.0,
+      "final_image_loss": 0.02882918156683445,
+      "delta_saturation_fraction": 0.10000000149011612,
+      "temporal_clipping_fraction": 0.10000000149011612,
+      "monotonicity_violation_fraction": 0.0,
+      "seed": 17
+    },
+    {
+      "initial_total_loss": 0.9052186012268066,
+      "final_total_loss": 0.24379947781562805,
+      "initial_soft_success": 0.09478138387203217,
+      "final_soft_success": 0.9660888314247131,
+      "mean_abs_delta_inside": 0.4643070101737976,
+      "max_abs_delta_outside": 0.0,
+      "final_image_loss": 0.027476143091917038,
+      "delta_saturation_fraction": 0.20000000298023224,
+      "temporal_clipping_fraction": 0.0,
+      "monotonicity_violation_fraction": 0.0,
+      "seed": 23
+    },
+    {
+      "initial_total_loss": 0.9052186012268066,
+      "final_total_loss": 0.24411194026470184,
+      "initial_soft_success": 0.09478138387203217,
+      "final_soft_success": 0.9659994840621948,
+      "mean_abs_delta_inside": 0.4651137888431549,
+      "max_abs_delta_outside": 0.0,
+      "final_image_loss": 0.027494871988892555,
+      "delta_saturation_fraction": 0.20000000298023224,
+      "temporal_clipping_fraction": 0.0,
+      "monotonicity_violation_fraction": 0.0,
+      "seed": 41
+    }
+  ],
+  "summary": {
+    "initial_total_loss": {
+      "mean": 0.9052186012268066,
+      "std": 0.0
+    },
+    "final_total_loss": {
+      "mean": 0.24636374413967133,
+      "std": 0.00417376416641913
+    },
+    "initial_soft_success": {
+      "mean": 0.09478138387203217,
+      "std": 0.0
+    },
+    "final_soft_success": {
+      "mean": 0.9666690429051717,
+      "std": 0.0010832544178549356
+    },
+    "mean_abs_delta_inside": {
+      "mean": 0.47267743945121765,
+      "std": 0.01380521275834034
+    },
+    "max_abs_delta_outside": {
+      "mean": 0.0,
+      "std": 0.0
+    },
+    "final_image_loss": {
+      "mean": 0.027933398882548015,
+      "std": 0.0007758270786689768
+    },
+    "delta_saturation_fraction": {
+      "mean": 0.16666666915019354,
+      "std": 0.05773502777928152
+    },
+    "temporal_clipping_fraction": {
+      "mean": 0.033333333830038704,
+      "std": 0.05773502777928152
+    },
+    "monotonicity_violation_fraction": {
+      "mean": 0.0,
+      "std": 0.0
+    }
+  }
+}

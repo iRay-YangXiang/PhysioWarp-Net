@@ -1,0 +1,71 @@
+model:
+  num_basis: 4
+  delta_max_seconds: 1.0
+  feature_channels: 8
+  spline_degree: 3
+
+surrogate:
+  temperature: 0.3
+
+attack:
+  mode: tmax_up
+  rcbf_threshold: 0.30
+  tmax_threshold_seconds: 5.3
+  sigmoid_sharpness: 10.0
+  baseline_margin_rcbf: 0.03
+  baseline_margin_tmax: 0.1
+
+loss:
+  attack: 1.0
+  image: 0.5
+  temporal_first: 0.05
+  temporal_second: 0.05
+  monotonicity: 1.0
+  delta_size: 0.40
+
+training:
+  seed: 17
+  deterministic: false
+  device: auto
+  iterations: 300
+  lr: 0.003
+  log_every: 25
+  min_interval_seconds: 0.05
+
+synthetic:
+  batch_size: 1
+  num_times: 10
+  depth: 2
+  height: 32
+  width: 32
+  end_time_seconds: 9.0
+  peak_time_seconds: 5.3
+  peak_width_seconds: 1.0
+  roi_fraction: 0.5
+  time_jitter_fraction: 0.0
+
+evaluation:
+  seeds: [17, 23, 41]
+  saturation_tolerance: 0.01
+  scenarios:
+    baseline: {}
+    nonuniform_times:
+      synthetic:
+        time_jitter_fraction: 0.35
+    narrow_tac:
+      synthetic:
+        peak_width_seconds: 0.7
+    small_roi:
+      synthetic:
+        roi_fraction: 0.3
+    reduced_delta_bound:
+      model:
+        delta_max_seconds: 0.75
+
+verification:
+  min_inside_delta_seconds: 0.01
+  max_outside_delta_seconds: 1.0e-7
+  max_image_l1: 0.10
+  max_saturation_fraction: 0.25
+  max_temporal_clipping_fraction: 0.15
+  max_monotonicity_violation_fraction: 0.01
